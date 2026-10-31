@@ -4,124 +4,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05080e">
+<meta name="description" content="Tony Advocates — Electrical engineering, installation, maintenance and solar PV. Powering Ideas. Building the Future.">
 <title>Tony Advocates | Electrical Engineering</title>
+
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
- margin:0;
- background:#050910;
- color:white;
+ background:#05080e;
+ color:#f5f8ff;
  font-family:Arial,sans-serif;
  line-height:1.7;
 }
+:root{--blue:#00baff;--muted:#a6b5c8}
 header{
- padding:20px;
- background:#080f1c;
- border-bottom:1px solid #168cff;
+ position:sticky;top:0;z-index:10;
+ background:#080d17;
+ border-bottom:1px solid #123a59;
+ padding:14px 6%;
+ display:flex;justify-content:space-between;
+ align-items:center;gap:15px;
 }
-.logo{font-size:23px;font-weight:bold}
-.logo span{color:#00baff}
-nav a{color:#8ddfff;margin-right:15px;text-decoration:none}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+ width:42px;height:42px;border:2px solid var(--blue);
+ border-radius:12px;display:grid;place-items:center;
+ color:var(--blue);font-size:22px;font-weight:900;
+ box-shadow:0 0 14px #00baff44;
+}
+.brand-name{font-size:17px;font-weight:800}
+.brand-name span{color:var(--blue)}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#b9d8ec;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--blue)}
 .hero{
- padding:75px 22px;
- background:linear-gradient(135deg,#071525,#001c36);
+ min-height:570px;padding:85px 7%;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:flex-start;
+ background:radial-gradient(ellipse at 80% 30%,#06305a 0%,#07172a 35%,#05080e 75%);
 }
-h1{font-size:43px;line-height:1.2}
-.blue{color:#00baff}
-section{padding:35px 22px}
-.card{
- background:#0d1928;
- border:1px solid #1266a0;
- border-radius:12px;
- padding:20px;
- margin:15px 0;
-}
-h2{color:#00baff}
+.eyebrow{color:var(--blue);font-weight:bold;letter-spacing:3px;font-size:13px}
+.hero h1{font-size:clamp(42px,8vw,76px);line-height:1.1;margin:20px 0}
+.blue{color:var(--blue)}
+.hero p{max-width:580px;color:#c3d0df;font-size:17px}
 .btn{
- display:inline-block;
- background:#00baff;
- color:#00101b;
- padding:12px 20px;
- border-radius:7px;
- text-decoration:none;
- font-weight:bold;
+ display:inline-block;margin-top:28px;padding:14px 25px;
+ background:var(--blue);color:#00101a;
+ border-radius:7px;text-decoration:none;font-weight:bold;
+ box-shadow:0 0 20px #00baff44;
 }
+.btn:hover{background:#70dcff}
+section{padding:75px 7%}
+.section-title{font-size:32px;margin-bottom:12px}
+.section-intro{color:var(--muted);max-width:650px;margin-bottom:30px}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:18px;
+}
+.card{
+ padding:25px;background:#0b1523;
+ border:1px solid #123b5b;border-radius:12px;
+ transition:.25s;
+}
+.card:hover{transform:translateY(-5px);border-color:var(--blue)}
+.card .symbol{font-size:30px}
+.card h3{color:var(--blue);margin:12px 0}
+.card p{color:#b5c4d5;font-size:14px}
+.about{background:#080f1a}
+.project{background:linear-gradient(145deg,#0d1c30,#080d16)}
+.notice{
+ border-left:3px solid var(--blue);
+ padding:15px 18px;background:#0b1b2a;
+ color:#c2d3e4;border-radius:5px;
+}
+.contact{text-align:center;background:#071525}
 footer{
- text-align:center;
- padding:25px;
- color:#8ca4bb;
- border-top:1px solid #1266a0;
+ text-align:center;padding:28px 15px;
+ color:#8396aa;border-top:1px solid #17344c;
+ font-size:13px;
+}
+footer span{color:var(--blue)}
+@media(max-width:600px){
+ header{align-items:flex-start;flex-direction:column}
+ nav{gap:15px}
+ .hero{min-height:510px;padding:65px 7%}
+ section{padding:55px 7%}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">TONY <span>ADVOCATES ⚡</span></div>
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+ <div class="brand">
+  <div class="logo">T<span class="blue">⚡</span>A</div>
+  <div class="brand-name">TONY <span>ADVOCATES</span></div>
+ </div>
+ <nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+ </nav>
 </header>
 
+<main>
 <div class="hero">
-<p class="blue">ELECTRICAL ENGINEERING</p>
-<h1>Powering Ideas.<br>
-<span class="blue">Building the Future.</span></h1>
-<p>Welcome to Tony Advocates. Developing electrical engineering skills through practical learning, innovation and dedication.</p>
-<a href="#about" class="btn">Discover More</a>
+ <div class="eyebrow">ELECTRICAL ENGINEERING</div>
+ <h1>Powering Ideas.<br><span class="blue">Building the Future.</span></h1>
+ <p>
+  Welcome to Tony Advocates — an emerging electrical engineering
+  brand driven by technical knowledge, practical skills,
+  innovation and a passion for powering tomorrow.
+ </p>
+ <a href="#services" class="btn">Explore Our Work →</a>
 </div>
 
-<section id="about">
-<h2>About Tony Advocates</h2>
-<div class="card">
-<p>Tony Advocates is an emerging electrical engineering brand focused on electrical installation, maintenance and renewable energy.</p>
-<p>Currently developing technical skills through electrical engineering studies and practical projects at Butaleja Technical Institute.</p>
-</div>
+<section id="about" class="about">
+ <h2 class="section-title">About <span class="blue">Tony Advocates</span></h2>
+ <p class="section-intro">
+  Building a foundation in electrical engineering through education,
+  hands-on projects and continuous technical development.
+ </p>
+ <div class="notice">
+  Our vision is to grow into a trusted electrical engineering
+  business known for quality, safety and reliable workmanship.
+ </div>
 </section>
 
 <section id="services">
-<h2>Our Focus Areas</h2>
-<div class="card">
-<h3>⚡ Electrical Installation</h3>
-<p>Domestic electrical installation principles and practical training.</p>
-</div>
-<div class="card">
-<h3>🔧 Maintenance</h3>
-<p>Electrical maintenance, inspection and fault-finding knowledge.</p>
-</div>
-<div class="card">
-<h3>☀ Solar Energy</h3>
-<p>Learning and developing knowledge in solar photovoltaic systems.</p>
-</div>
+ <h2 class="section-title">Our <span class="blue">Specialisations</span></h2>
+ <p class="section-intro">
+  Our developing areas of technical focus.
+ </p>
+ <div class="grid">
+  <div class="card">
+   <div class="symbol">⚡</div>
+   <h3>Electrical Installation</h3>
+   <p>Domestic wiring, lighting circuits, socket outlets and electrical distribution.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">🔧</div>
+   <h3>Electrical Maintenance</h3>
+   <p>Electrical inspection, maintenance principles and fault-finding skills.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">☀️</div>
+   <h3>Solar PV Systems</h3>
+   <p>Solar energy systems, photovoltaic installation and renewable energy technology.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">🏠</div>
+   <h3>Domestic Electrical Systems</h3>
+   <p>Safe electrical systems for residential buildings and facilities.</p>
+  </div>
+ </div>
 </section>
 
-<section id="projects">
-<h2>Our Projects</h2>
-<div class="card">
-<h3>Classroom Electrification</h3>
-<p>Participated in a two-classroom block electrification training project.</p>
-</div>
-<div class="card">
-<h3>Solar PV Installation</h3>
-<p>Practical learning experience involving a solar photovoltaic system.</p>
-</div>
+<section id="projects" class="project">
+ <h2 class="section-title">Practical <span class="blue">Experience</span></h2>
+ <p class="section-intro">
+  Learning through real-world technical projects.
+ </p>
+ <div class="grid">
+  <div class="card">
+   <div class="symbol">🏫</div>
+   <h3>Classroom Electrification</h3>
+   <p>Participated in a school classroom electrical installation project.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">🔆</div>
+   <h3>Solar PV Project</h3>
+   <p>Practical experience with a solar photovoltaic system.</p>
+  </div>
+ </div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p>Interested in learning more about Tony Advocates?</p>
-<p>Contact details will be added when an appropriate public contact method is ready.</p>
-</div>
+<section id="contact" class="contact">
+ <h2 class="section-title">Let's Build the <span class="blue">Future</span></h2>
+ <p class="section-intro" style="margin:0 auto">
+  Interested in Tony Advocates? Contact information and business
+  enquiry channels will be added here.
+ </p>
+ <a href="#about" class="btn">Discover Our Vision</a>
 </section>
+</main>
 
 <footer>
-© 2026 Tony Advocates. All rights reserved.
-<p>Electrical Engineering | Innovation | Excellence</p>
+ <p>© 2026 <span>TONY ADVOCATES</span>. All rights reserved.</p>
+ <p>Electrical Engineering | Innovation | Excellence</p>
+ <p>Powering Ideas. Building the Future. ⚡</p>
 </footer>
 
 </body>
 </html>
+
